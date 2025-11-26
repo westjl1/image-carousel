@@ -1,0 +1,44 @@
+{
+  "forest": [
+    {
+      "forest": "image-carousel/src/images/forest/forest.jpeg"
+    },
+    {
+      "forest2": "image-carousel/src/images/forest/forest2.jpeg"
+    },
+    {
+      "forest3": "image-carousel/src/images/forest/forest3.jpeg"
+    },
+    {
+      "forest4": "image-carousel/src/images/forest/forest4.jpeg"
+    }
+  ],
+  "mountain": [
+    {
+      "mountain": "image-carousel/src/images/mountain/mountain.jpeg"
+    },
+    {
+      "mountain2": "image-carousel/src/images/mountain/mountain2.jpeg"
+    },
+    {
+      "mountain3": "image-carousel/src/images/mountain/mountain3.jpeg"
+    },
+    {
+      "mountain4": "image-carousel/src/images/mountain/mountain4.jpeg"
+    }
+  ],
+  "ocean": [
+    {
+      "ocean": "image-carousel/src/images/ocean/ocean.jpeg"
+    },
+    {
+      "ocean2": "image-carousel/src/images/ocean/ocean2.jpeg"
+    },
+    {
+      "ocean3": "image-carousel/src/images/ocean/ocean3.jpeg"
+    },
+    {
+      "ocean4": "image-carousel/src/images/ocean/ocean4.jpeg"
+    }
+  ]
+}
