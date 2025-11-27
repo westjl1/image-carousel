@@ -38,7 +38,10 @@ function writeCarousel(imageArray) {
   prevLink.className = "prev";
   prevLink.innerHTML = "&#10094;";
   prevLink.addEventListener("click", () => {
-    currentImageIndex -= 1;
+    const nextImageIndex = currentImageIndex - 1;
+    if (nextImageIndex < 0) {
+      currentImageIndex = imageArray.length - 1;
+    } else currentImageIndex -= 1;
     showImage(currentImageIndex);
   });
 
@@ -46,7 +49,10 @@ function writeCarousel(imageArray) {
   nextLink.className = "next";
   nextLink.innerHTML = "&#10095;";
   nextLink.addEventListener("click", () => {
-    currentImageIndex += 1;
+    const nextImageIndex = currentImageIndex + 1;
+    if (nextImageIndex > imageArray.length - 1) {
+      currentImageIndex = 0;
+    } else currentImageIndex += 1;
     showImage(currentImageIndex);
   });
 
@@ -56,18 +62,23 @@ function writeCarousel(imageArray) {
   carouselDiv.appendChild(navDotDiv);
 
   document.body.appendChild(carouselDiv);
-  // document.body.appendChild(navDotDiv);
 
   //start by showing the first image
   showImage(currentImageIndex);
+
+  setInterval(() => {
+    console.log(currentImageIndex);
+    const nextImageIndex = currentImageIndex + 1;
+    if (nextImageIndex > imageArray.length - 1) {
+      currentImageIndex = 0;
+    } else currentImageIndex = nextImageIndex;
+    showImage(currentImageIndex);
+  }, 5000);
 }
 
 function showImage(imageIndex) {
   const domImages = document.getElementsByClassName("an-image");
   const navDots = document.getElementsByClassName("nav-dot");
-
-  if (imageIndex < 0) imageIndex = 0;
-  if (imageIndex > domImages.length - 1) imageIndex = domImages.length - 1;
 
   Object.keys(domImages).forEach((key) => {
     const imageElement = domImages[key];
@@ -87,5 +98,10 @@ function showImage(imageIndex) {
     }
   });
 }
+
+// setInterval(() => {
+//   console.log("yep")
+
+// }, 2000)
 
 export default writeCarousel;
