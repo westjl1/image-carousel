@@ -1,6 +1,3 @@
-// index.js
-import carousel from "./carousel";
-
 import forestImage from "./images/forest/forest.jpeg";
 import forest2Image from "./images/forest/forest2.jpeg";
 import forest3Image from "./images/forest/forest3.jpeg";
@@ -47,7 +44,6 @@ imageTypeDropdown.appendChild(optionOcean);
 imageTypeDropdown.appendChild(optionMountain);
 
 imageTypeDropdown.addEventListener("change", (e) => {
-  console.log(e.target.value);
   if (e.target.value === "forest") {
     writeCarousel(forestImages);
   } else if (e.target.value === "mountain") {
@@ -58,3 +54,5 @@ imageTypeDropdown.addEventListener("change", (e) => {
 });
 
 document.body.appendChild(imageTypeDropdown);
+
+writeCarousel(forestImages);
